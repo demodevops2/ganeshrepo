@@ -1,0 +1,11 @@
+---
+- hosts: devopsgroup
+  become: yes
+  roles: 
+#    - server
+#    - php
+#    - mysql
+#    - wordpress
+    - nginxrole
+
+    
