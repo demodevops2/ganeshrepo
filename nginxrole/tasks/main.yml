@@ -1,0 +1,12 @@
+---
+# tasks file for nginxrole
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+  become: yes
+
+
+- name: Installs nginx web server on ubuntu 16.04LTS
+  apt: pkg=nginx state=installed update_cache=true
+  notify:
+     - start nginx
